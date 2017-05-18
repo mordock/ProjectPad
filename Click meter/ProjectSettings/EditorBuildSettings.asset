@@ -32,3 +32,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scene/tutorial.unity
     guid: ababdc7a506600d42876d292c0e1f47a
+  - enabled: 1
+    path: Assets/scene/BaseTestScene.unity
+    guid: efddac780b53c0b4f9e12db9a8384835
+  - enabled: 1
+    path: Assets/scene/help.unity
+    guid: b1dacb5565b8e02499860832f3b04c1a
+  - enabled: 1
+    path: Assets/scene/Test.unity
+    guid: 334adc9860cfb7e4ea6f1f0af315a811
