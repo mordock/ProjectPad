@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HelpButton : MonoBehaviour 
 {
@@ -17,7 +18,6 @@ public class HelpButton : MonoBehaviour
 	}
 
 	public void HelpKnop(){
-		Application.LoadLevel ("help");
+		SceneManager.LoadScene ("help");
 	}
-
 }

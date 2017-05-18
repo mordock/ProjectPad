@@ -356,7 +356,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Terug
+  m_Text: Back
 --- !u!222 &616465482
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -430,13 +430,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "De Click Away app zorgt ervoor dat het u zult gaan afleiden van het roken.
-    Het doel van deze app is dat het binnen twee weken een cyclus voor u gaat berekenen.
-    Dit cyclus berekend de app doordat u aangeeft wanneer u gaat roken. Deze app dient
-    voor afleiding tot u volledig bent gestopt met het roken. Wanneer u dit doel bereikt
-    hebt, kunt u nog steeds verder gaan met onze app. Alvast veel succes!\r\n\nDe
-    rode knop:\r\nHet doel is om op de rode knop te gaan drukken totdat het balkje
-    vol is. Wanneer het balkje vol is, wordt u naar het volgende scherm geleid."
+  m_Text: "The Click Away app will distract you from smoking.\r\nThe goal of this
+    app is to find out what your smoking pattern is in two weeks.\r\nThe smoking pattern
+    is calculated by remembering when you open up the app in the first two weeks.\r\nAfter
+    the first two weeks the app will send you notifications at times you normally
+    would smoke, this is to make sure you will be distracted from smoking at these
+    times.\r\nGood luck!\r\n\r\nThe red button:\r\nThe goal is to click the red button
+    until the bar has been filled. You'll be redirected to the next screen when the
+    bar has been filled.\r\n"
 --- !u!222 &658131980
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -694,7 +695,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Instructie:'
+  m_Text: 'Tutorial:'
 --- !u!222 &1454610418
 CanvasRenderer:
   m_ObjectHideFlags: 0
