@@ -5,6 +5,7 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using Assets.Classes;
+using UnityEngine.SceneManagement;
 
 public class CClicktest : MonoBehaviour {
 
@@ -27,7 +28,7 @@ public class CClicktest : MonoBehaviour {
             AppOpenDate appOpenDate = new AppOpenDate();
             appOpenDate.writeToJSON();
             //TODO Naar nieuwe scene gaan 
-			Application.LoadLevel("MainMenu");
+			SceneManager.LoadScene("MainMenu");
         }
 	}
 

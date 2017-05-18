@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BaseBehaviour : MonoBehaviour {
 	public static int baseLives = 5;
@@ -8,7 +7,7 @@ public class BaseBehaviour : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(baseLives <= 0){
-			Application.LoadLevel("GameOver");
+			SceneManager.LoadScene("GameOver");
             baseLives = 5;
 		}
 	}
