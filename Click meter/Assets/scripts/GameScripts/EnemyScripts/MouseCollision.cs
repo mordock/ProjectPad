@@ -16,10 +16,12 @@ public class MouseCollision : MonoBehaviour {
             {
                 RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
 
-                if (hit.collider != null) { 
-                	if (hit.collider.gameObject == gameObject) 
-                		Destroy(gameObject);
-                		scoreKeeper.Score(scoreValue);
+                if (hit.collider != null) {
+                    if (hit.collider.gameObject == gameObject)
+                    {
+                        scoreKeeper.Score(scoreValue);
+                        Destroy(gameObject);
+                    }
                 }
             }
         }
