@@ -3,23 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MusicPlayer : MonoBehaviour {
-	public AudioClip[] levelMusicChangeArray;
-	private AudioSource audioScource;
+	static MusicPlayer instance = null;
 
 	void Awake(){
-		DontDestroyOnLoad(gameObject);
-	}
-
-	void Start(){
-		audioScource = GetComponent<AudioSource>();
-	}
-
-	void OnLevelWasLoaded(int level){
-		AudioClip thisLevelMusic = levelMusicChangeArray[level];
-		if(thisLevelMusic){
-			audioScource.clip = thisLevelMusic;
-			audioScource.loop = true;
-			audioScource.Play();
+		if(instance != null){
+			Destroy(gameObject);
+		}else{
+			instance = this;
+			GameObject.DontDestroyOnLoad(gameObject);
 		}
 	}
 }
