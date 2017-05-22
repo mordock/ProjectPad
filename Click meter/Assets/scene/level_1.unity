@@ -186,7 +186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 245006438}
   m_Layer: 0
-  m_Name: fruit2
+  m_Name: fruit2/banana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -356,7 +356,7 @@ GameObject:
   m_Component:
   - component: {fileID: 382187999}
   m_Layer: 0
-  m_Name: fruit3
+  m_Name: fruit3/lemon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -679,7 +679,7 @@ GameObject:
   m_Component:
   - component: {fileID: 622149396}
   m_Layer: 0
-  m_Name: fruit4
+  m_Name: fruit4/orange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -982,7 +982,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1152874125}
   m_Layer: 0
-  m_Name: fruit1
+  m_Name: fruit1/apple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1145,10 +1145,10 @@ RectTransform:
   m_Father: {fileID: 779964317}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 135.5, y: 226}
-  m_SizeDelta: {x: 71, y: 53}
+  m_AnchorMin: {x: 0.7813637, y: 0.8517761}
+  m_AnchorMax: {x: 0.9856819, y: 0.9457621}
+  m_AnchoredPosition: {x: 0.5, y: 1.5}
+  m_SizeDelta: {x: -1, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1262257769
 MonoBehaviour:
@@ -1231,10 +1231,10 @@ RectTransform:
   m_Father: {fileID: 779964317}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7, y: 222.5}
-  m_SizeDelta: {x: 96, y: 60}
+  m_AnchorMin: {x: 0.34688637, y: 0.8428952}
+  m_AnchorMax: {x: 0.6193182, y: 0.9457621}
+  m_AnchoredPosition: {x: -1, y: 0.5}
+  m_SizeDelta: {x: 0, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1300516108
 MonoBehaviour:
@@ -1296,7 +1296,7 @@ GameObject:
   - component: {fileID: 1366357425}
   - component: {fileID: 1366357426}
   m_Layer: 0
-  m_Name: banana 2
+  m_Name: banana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1385,10 +1385,10 @@ RectTransform:
   m_Father: {fileID: 779964317}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -106.5, y: 222.5}
-  m_SizeDelta: {x: 103, y: 60}
+  m_AnchorMin: {x: 0.059636373, y: 0.8428952}
+  m_AnchorMax: {x: 0.34688637, y: 0.9457621}
+  m_AnchoredPosition: {x: -2, y: 0.5}
+  m_SizeDelta: {x: 2, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1393223081
 MonoBehaviour:
@@ -1438,7 +1438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2087112763}
   m_Layer: 0
-  m_Name: fruit5
+  m_Name: fruit5/basket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
