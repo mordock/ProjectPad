@@ -16,6 +16,17 @@ public class Spawner : MonoBehaviour {
     private void Start () {
         spawnInterval = 1;
         increaseSpawnRate = 10;
+
+        if (gameObject.tag == "SoldierAnt")
+        {
+            spawnInterval = 10;
+            increaseSpawnRate = 50;
+        }
+        if (gameObject.tag == "BulletAnt")
+        {
+            spawnInterval = 20;
+            increaseSpawnRate = 70;
+        }
     }
 
     private void createEnemy()

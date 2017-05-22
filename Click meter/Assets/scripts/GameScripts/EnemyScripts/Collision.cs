@@ -11,5 +11,10 @@ public class Collision : MonoBehaviour {
             Destroy(collision.gameObject);
             BaseBehaviour.baseLives -= 1;
         }
+        else if (collision.gameObject.tag == "SoldierAnt")
+        {
+            Destroy(collision.gameObject);
+            BaseBehaviour.baseLives -= 1;
+        }
     }
 }
