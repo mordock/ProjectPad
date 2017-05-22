@@ -119,7 +119,7 @@ namespace Assets.classes
         }
 
         /// <summary>
-        /// Set the notification in android
+        /// Set the notification in android for entire week
         /// </summary>
         public void sendNotification(int daysAdded, Cyclus cyclus) {
             int minMinutes = 30;
@@ -173,7 +173,7 @@ namespace Assets.classes
                 }
             }
 
-            if (daysAdded < 7)
+            if (daysAdded < 6)
             {
                 sendNotification(daysAdded+1, cyclus);
             }

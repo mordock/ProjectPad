@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HelpScreenManager : MonoBehaviour
 {
@@ -17,6 +16,6 @@ public class HelpScreenManager : MonoBehaviour
 	}
 
 	public void TerugKnop(){
-		Application.LoadLevel ("Clickmeter");
+		SceneManager.LoadScene ("Clickmeter");
 	}
 }
