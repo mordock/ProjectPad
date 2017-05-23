@@ -575,7 +575,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BackGroundColor: {r: 0.12456747, g: 0.5294118, b: 0.177616, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -1247,7 +1247,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.34688637, y: 0.8428952}
   m_AnchorMax: {x: 0.6193182, y: 0.9457621}
-  m_AnchoredPosition: {x: 15.5, y: 0.5}
+  m_AnchoredPosition: {x: 5.948, y: 1.3437042}
   m_SizeDelta: {x: 0, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1300516108

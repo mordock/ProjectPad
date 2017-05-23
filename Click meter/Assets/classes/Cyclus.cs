@@ -122,7 +122,7 @@ namespace Assets.classes
         /// Set the notification in android for entire week
         /// </summary>
         public void sendNotification(int daysAdded, Cyclus cyclus) {
-            int minMinutes = 30;
+            int minMinutes = 15;
             DayOfWeek today;
             if (daysAdded > 0)
             {
