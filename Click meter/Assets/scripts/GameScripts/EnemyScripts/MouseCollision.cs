@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class MouseCollision : MonoBehaviour {
 	public int scoreValue = 10;
+    public int lifeRemoved = -1;
 	private ScoreKeeper scoreKeeper;
+    private EnemyLife enemyLife;
 	void Start(){
 		scoreKeeper = GameObject.Find("Score").GetComponent<ScoreKeeper>();
+        enemyLife = GetComponent<EnemyLife>();
 	}
 
 	// Update is called once per frame
@@ -19,8 +23,15 @@ public class MouseCollision : MonoBehaviour {
                 if (hit.collider != null) {
                     if (hit.collider.gameObject == gameObject)
                     {
-                        scoreKeeper.Score(scoreValue);
-                        Destroy(gameObject);
+                        enemyLife.lifePoints--;
+
+                        if (enemyLife.lifePoints <= 0)
+                        {
+                            scoreKeeper.Score(scoreValue);
+                            Destroy(gameObject);
+                        }
+                        
+                            //Destroy(gameObject);
                     }
                 }
             }

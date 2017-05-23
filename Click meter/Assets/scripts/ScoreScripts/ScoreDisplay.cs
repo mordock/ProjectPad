@@ -15,6 +15,5 @@ public class ScoreDisplay : MonoBehaviour {
 		myText.text = ScoreKeeper.score.ToString();
 
 		ScoreKeeper.Reset();
-		//HighscoreJson.createHighscore();
 	}
 }

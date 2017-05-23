@@ -23,12 +23,12 @@ public class LevelManager : MonoBehaviour {
             if (currentScene == "help")
             {
                 lastScene = "Clickmeter";
-            } else if (currentScene == "Video" || currentScene == "Health Defence#")
+            } else if (currentScene == "Video" || currentScene == "FruitDefence")
             {
                 lastScene = "MainMenu";
             } else if (currentScene == "Highscore" || currentScene == "level_1" || currentScene == "GameOver" || currentScene == "tutorial")
             {
-                lastScene = "Health Defence#";
+                lastScene = "FruitDefence";
             } else {
                 lastScene = currentScene;
             }

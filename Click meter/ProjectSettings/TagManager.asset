@@ -6,6 +6,8 @@ TagManager:
   tags:
   - base
   - enemy
+  - SoldierAnt
+  - BulletAnt
   layers:
   - Default
   - TransparentFX

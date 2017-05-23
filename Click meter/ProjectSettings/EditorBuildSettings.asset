@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/scene/Video.unity
     guid: d67c7f8699053fa4db37f54d08990893
   - enabled: 1
-    path: Assets/scene/Health Defence#.unity
+    path: Assets/scene/FruitDefence.unity
     guid: d74876126ec87e7479d629f5385a6b41
   - enabled: 1
     path: Assets/scene/Highscore.unity
