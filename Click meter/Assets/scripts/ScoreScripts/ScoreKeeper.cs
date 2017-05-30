@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class ScoreKeeper : MonoBehaviour {
 	public static int score;
 	private Text myText;
-	// Use this for initialization
 	void Start () {
 		myText = GetComponent<Text>();
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyLife : MonoBehaviour {
 
     public float lifePoints;
-	// Use this for initialization
+
 	void Start () {
         lifePoints = 1;   
         
@@ -13,10 +13,5 @@ public class EnemyLife : MonoBehaviour {
         {
             lifePoints = 2;
         }
-    }
-
-    public void Update()
-    {
-        
     }
 }

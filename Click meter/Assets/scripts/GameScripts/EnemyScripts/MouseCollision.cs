@@ -13,7 +13,6 @@ public class MouseCollision : MonoBehaviour {
         enemyLife = GetComponent<EnemyLife>();
 	}
 
-	// Update is called once per frame
 	private void Update () {
         if (Input.GetMouseButtonDown(0))
         {
@@ -27,11 +26,11 @@ public class MouseCollision : MonoBehaviour {
 
                         if (enemyLife.lifePoints <= 0)
                         {
+                            //destruction of enemies and score adding is handled here because different enemeis have different amounts of health,
+                            //handling unit destruction and point adding seperately leads to unnecessary complications.
                             scoreKeeper.Score(scoreValue);
                             Destroy(gameObject);
                         }
-                        
-                            //Destroy(gameObject);
                     }
                 }
             }

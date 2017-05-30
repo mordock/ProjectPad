@@ -1422,7 +1422,8 @@ Prefab:
       propertyPath: lifePoints
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: b5f2036d6e9001a429409b8cb4a3cce1, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1393223079
@@ -1598,6 +1599,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114520489544212848, guid: 9f30b45725a127d4cbb7527b6049212e, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 9f30b45725a127d4cbb7527b6049212e, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2087112762

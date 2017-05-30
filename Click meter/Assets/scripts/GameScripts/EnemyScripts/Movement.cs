@@ -10,19 +10,17 @@ public class Movement : MonoBehaviour {
     public float damping = 0.5f;
 
     private void Start () {
-        //Remeber to add the tag to the object itself, Tag isnt the object name.
         this.targetPosition = GameObject.FindGameObjectWithTag("base").transform.position;
     }
 
     private void lookAt()
     {
-        //var delta = targetPosition.position - transform.position;
-        //delta.z = 0;
         rotation = Quaternion.LookRotation(targetPosition);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * damping);
     }
 
     private void Update () {
+        //To get fluid movement on units speed is multiplied by deltatime, other time functions exist but are too fast in this case.
         this.transform.position = Vector3.Lerp(this.transform.position, this.targetPosition, speed * Time.deltaTime * damping);
     }
 }
