@@ -41,3 +41,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scene/Test.unity
     guid: 334adc9860cfb7e4ea6f1f0af315a811
+  - enabled: 1
+    path: Assets/scene/Calendar.unity
+    guid: db870a2188d4bdd4f9406665248335fd

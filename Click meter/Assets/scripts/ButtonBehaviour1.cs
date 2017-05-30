@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Assets.Classes;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class ButtonBehaviour1 : MonoBehaviour {
 
@@ -27,8 +28,12 @@ public class ButtonBehaviour1 : MonoBehaviour {
   if ((Click/100f) >= 1) {
             AppOpenDate appOpenDate = new AppOpenDate();
             appOpenDate.writeToJSON();
-            //TODO Naar nieuwe scene gaan 
-   SceneManager.LoadScene("MainMenu");
+            //TODO Naar nieuwe scene gaan
+
+            string[] scenes = new string[2] { "Video", "FruitDefence" };
+            int random = Random.Range(0,2);
+            SceneManager.LoadScene(scenes[random]);
+            
         }
  }
 
