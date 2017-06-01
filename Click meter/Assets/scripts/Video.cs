@@ -11,12 +11,14 @@ public class Video : MonoBehaviour {
     string randVid;
     string video1 = "Assets/Videos/testVideo.mp4";
     string video2 = "Assets/Videos/testVideo2.mp4";
+    string video3 = "Assets/Videos/testVideo3.mp4";
+    bool mute = false;
 
     void Start () {
         GameObject camera = GameObject.Find("Main Camera");
         videoPlayer = camera.AddComponent<UnityEngine.Video.VideoPlayer>();
 
-        int random = Random.Range(1, 3);     
+        int random = Random.Range(1, 4);     
         switch (random)
         {
             case 1:
@@ -26,6 +28,10 @@ public class Video : MonoBehaviour {
             case 2:
                 vidID = "video2";
                 randVid = video2;
+                break;
+            case 3:
+                vidID = "video3";
+                randVid = video3;
                 break;
         }
 
@@ -51,11 +57,21 @@ public class Video : MonoBehaviour {
             Debug.Log("Video: " + vidID + " ended.");
             EndReached();
         }
+
+        if (videoPlayer.frame <= 90 || !(videoPlayer.isPlaying) || mute)
+        {
+            MuteButton();
+        }
     }
 
     void EndReached()
     {
         SceneManager.LoadScene("MainMenu");
         Debug.Log("level loaded: MainMenu");
+    }
+
+    void MuteButton()
+    {
+
     }
 }
