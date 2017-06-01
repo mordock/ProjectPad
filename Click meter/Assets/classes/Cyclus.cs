@@ -193,5 +193,86 @@ namespace Assets.classes
             }
             return cyclus;
         }
+
+        //Remco Schilder
+        public void ChangeCyclus()
+        {
+            Cyclus cyclus = readCyclus();
+            int CountNotifications;
+
+            for (int i = 0; i < 7; i++)
+            {
+
+                int sigarettesPerDay;
+
+                switch (i)
+                {
+                    case 0:
+                        sigarettesPerDay = cyclus.monday.Count;
+                        break;
+                    case 1:
+                        sigarettesPerDay = cyclus.tuesday.Count;
+                        break;
+                    case 2:
+                        sigarettesPerDay = cyclus.wednesday.Count;
+                        break;
+                    case 3:
+                        sigarettesPerDay = cyclus.thursday.Count;
+                        break;
+                    case 4:
+                        sigarettesPerDay = cyclus.friday.Count;
+                        break;
+                    case 5:
+                        sigarettesPerDay = cyclus.saturday.Count;
+                        break;
+                    default:
+                        sigarettesPerDay = cyclus.sunday.Count;
+                        break;
+                }
+
+                if (sigarettesPerDay <= 10)
+                {
+                    CountNotifications = Convert.ToInt32(Math.Round(sigarettesPerDay * 0.10));
+                }
+                else if (sigarettesPerDay <= 20)
+                {
+                    CountNotifications = Convert.ToInt32(Math.Round(sigarettesPerDay * 0.20));
+                }
+                else
+                {
+                    CountNotifications = Convert.ToInt32(Math.Round(sigarettesPerDay * 0.30));
+                }
+
+                for (int j = 0; j < CountNotifications; j++)
+                {
+                    switch (i)
+                    {
+                        case 0:
+                            cyclus.monday.RemoveAt(0);
+                            break;
+                        case 1:
+                            cyclus.tuesday.RemoveAt(0);
+                            break;
+                        case 2:
+                            cyclus.wednesday.RemoveAt(0);
+                            break;
+                        case 3:
+                            cyclus.thursday.RemoveAt(0);
+                            break;
+                        case 4:
+                            cyclus.friday.RemoveAt(0);
+                            break;
+                        case 5:
+                            cyclus.saturday.RemoveAt(0);
+                            break;
+                        default:
+                            cyclus.sunday.RemoveAt(0);
+                            break;
+                    }
+                }
+            }
+            
+            File.WriteAllText(path, JsonConvert.SerializeObject(cyclus, Constants.jsonSerializerSettings));
+        }
     }
 }

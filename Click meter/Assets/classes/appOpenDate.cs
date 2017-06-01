@@ -19,7 +19,7 @@ namespace Assets.Classes
         private const int MINUTES_BETWEEN_SMOKES = 15;
         [JsonProperty]
         public DateTime datetimeOpened {  get; private set; }
-     
+        
         public AppOpenDate() {
             datetimeOpened = DateTime.Now.AddMinutes(1);
         }
