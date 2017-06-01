@@ -4,16 +4,7 @@ using UnityEngine;
 
 public class MuteMusic : MonoBehaviour {
 	public static bool pause = false;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
+	//pause the music when you press the mute button, and continue when unmute is pressed
 	void MutetheMusic(){
 		if(pause == false){
 			pause = true;
