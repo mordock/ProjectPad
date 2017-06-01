@@ -8,56 +8,69 @@ using Assets.Classes;
 using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
-public class ButtonBehaviour1 : MonoBehaviour {
+public class ButtonBehaviour1 : MonoBehaviour
+{
 
- public Scrollbar Clickmeter;
- public float ClickTime = 1f;
- public Text text;
-
- private float Click = 0f;
+    public Scrollbar Clickmeter;
+    public float ClickTime = 1f;
+    public Text text;
     
-    private const string FILE_NAME = "test.data";
- private float lastClickTime = 0f;
- private float value = 0f;
 
-    public void Knop(float value){
-  this.value = value;
+    private float Click = 0f;
 
-  UpdateClick (value, false);
+    
+    private float lastClickTime = 0f;
+    private float value = 0f;
 
-  if ((Click/100f) >= 1) {
+
+    public void Knop(float value)
+    {
+        this.value = value;
+
+        UpdateClick(value, false);
+
+        if ((Click / 100f) >= 1)
+        {
             AppOpenDate appOpenDate = new AppOpenDate();
             appOpenDate.writeToJSON();
             //TODO Naar nieuwe scene gaan
 
             string[] scenes = new string[2] { "Video", "FruitDefence" };
-            int random = Random.Range(0,2);
+            int random = Random.Range(0, 2);
             SceneManager.LoadScene(scenes[random]);
-            
+
         }
- }
+    }
 
- public void Update() {
-  if (Click <= 0f || lastClickTime < ClickTime) {
-   lastClickTime += Time.deltaTime;
+    public void Update()
+    {
 
-   return;
-  }
 
-  UpdateClick (value, true);
- }
+        if (Click <= 0f || lastClickTime < ClickTime)
+        {
+            lastClickTime += Time.deltaTime;
 
- private void UpdateClick(float delta, bool inverse) {
-  //BUGFIX: Inverse-boolean because Unity is lame
-  if (inverse) {
-   Click -= value;
-  } else {
-   Click += value;
-  }
+            return;
+        }
 
-  Click = Math.Max (0, Math.Min (Click, 100));
+        UpdateClick(value, true);
+    }
 
-  Clickmeter.size = Click/100f;
-  lastClickTime = 0f;
- }
+    private void UpdateClick(float delta, bool inverse)
+    {
+        //BUGFIX: Inverse-boolean because Unity is lame
+        if (inverse)
+        {
+            Click -= value;
+        }
+        else
+        {
+            Click += value;
+        }
+
+        Click = Math.Max(0, Math.Min(Click, 100));
+
+        Clickmeter.size = Click / 100f;
+        lastClickTime = 0f;
+    }
 }
