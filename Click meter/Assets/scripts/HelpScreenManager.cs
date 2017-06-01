@@ -8,8 +8,5 @@ public class HelpScreenManager : MonoBehaviour
 		SceneManager.LoadScene ("Clickmeter");
 	}
 
-    public void BackCalendar()
-    {
-        SceneManager.LoadScene("Clickmeter");
-    }
+    
 }

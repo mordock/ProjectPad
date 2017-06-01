@@ -3,20 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GreenButton : MonoBehaviour {
-    public Button clickButton; 
-    
-    public bool isClicked = false;
+public class GreenButton : MonoBehaviour
+{
+    public Button clickButton;
 
-    public void GreenButtonClick()
+    private void Start()
     {
-        
-        isClicked = true;
-        if (isClicked)
-        {
+        clickButton.interactable = false;
+    }
 
-            clickButton.interactable = true;
+    public void Update()
+    {
+        if (Input.touchCount >= 1)
+        {
+            Vector3 wp = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+            if (GetComponent<BoxCollider2D>().OverlapPoint(wp))
+            {
+                clickButton.interactable = true;
+            }
+            else
+            {
+                clickButton.interactable = false;
+            }
+        }
+        else
+        {
+            clickButton.interactable = false;
         }
     }
-    
 }
