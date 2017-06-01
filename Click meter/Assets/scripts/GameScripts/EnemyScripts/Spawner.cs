@@ -17,7 +17,7 @@ public class Spawner : MonoBehaviour {
         spawnInterval = 1;
         increaseSpawnRate = 10;
 
-        //This is to set the different spawn times for the different ant types.
+        //This is to set the different spawn times for the different ant types. enemy has no seperate spawn time because it's the default.
         if (gameObject.tag == "SoldierAnt")
         {
             spawnInterval = 10;
@@ -36,13 +36,11 @@ public class Spawner : MonoBehaviour {
         yMax = 20;
         xMin = -10;
         xMax = 20;
-
-
-        
+      
             int spawnPointX = Random.Range(xMin, xMax);
             int spawnPointY = Random.Range(yMin, yMax);
 
-        //because the base is the 0,0 value within this game to ensure enemies only spawn offscreen, this littel code snippit is used.
+        //Because the base is the 0,0 value within this game to ensure enemies only spawn offscreen, this littel code snippit is used.
             if (spawnPointX > -10 || spawnPointX < 10 && spawnPointY > -5 || spawnPointY < 5)
         {
             spawnPointX *= 3;

@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 114008407475896980}
   - component: {fileID: 61017361274059186}
   - component: {fileID: 114564966936381156}
-  - component: {fileID: 114909617290551588}
   - component: {fileID: 114446221770137366}
   - component: {fileID: 114322478404289766}
   m_Layer: 0
@@ -69,7 +68,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.55, y: 0.48}
+  m_Size: {x: 0.8, y: 0.8}
   m_EdgeRadius: 0
 --- !u!114 &114008407475896980
 MonoBehaviour:
@@ -121,18 +120,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreValue: 10
   lifeRemoved: -1
---- !u!114 &114909617290551588
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1656117630701392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0fb7276a3a2395419ebe62cb008e999, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!212 &212798208874985546
 SpriteRenderer:
   m_ObjectHideFlags: 1
