@@ -4,10 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
-		//method loads next level, called when buttton pressed
-	public void LoadLevel(string name){
+
+    public void LoadLevel(string name){
         Debug.Log("level loaded: " + name);
-        SceneManager.LoadScene(name);       
+        SceneManager.LoadScene(name);
+        //Application.LoadLevel(name);     
 	}
 
 	public void QuitRequest(){
