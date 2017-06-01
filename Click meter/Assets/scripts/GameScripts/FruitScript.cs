@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class FruitScript : MonoBehaviour {
 	public GameObject fruit1, fruit2, fruit3, fruit4, fruit5;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
+	//cycle through the baselives and delete the appropriate fruit 
 	void Update () {
 		if(BaseBehaviour.baseLives == 4){
 			Destroy(fruit1);

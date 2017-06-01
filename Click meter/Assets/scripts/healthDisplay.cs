@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class healthDisplay : MonoBehaviour {
 	private Text myText;
-	// Use this for initialization
+	//create text and fill it with the baseLives
 	void Start () {
 		myText = GetComponent<Text>();
 	}
@@ -13,8 +13,6 @@ public class healthDisplay : MonoBehaviour {
 	public void Health(){
 		myText.text = BaseBehaviour.baseLives.ToString();
 	}	
-	
-	// Update is called once per frame
 	void Update () {
 		Health();
 	}

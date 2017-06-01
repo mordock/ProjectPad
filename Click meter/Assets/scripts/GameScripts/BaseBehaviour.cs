@@ -3,8 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class BaseBehaviour : MonoBehaviour {
 	public static int baseLives = 5;
-	
-	// Update is called once per frame
+
 	void Update () {
 		if(baseLives <= 0){
 			SceneManager.LoadScene("GameOver");

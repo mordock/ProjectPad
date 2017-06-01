@@ -5,13 +5,9 @@ using UnityEngine.UI;
 
 public class highscoreDisplay : MonoBehaviour {
 
-	// Use this for initialization
+	//shows your score
 	void Start () {
 		Text myText = GetComponent<Text>();
 		myText.text = ScoreKeeper.score.ToString();
-	}
-	
-	void Reset(){
-		
 	}
 }
