@@ -44,3 +44,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scene/Calendar.unity
     guid: db870a2188d4bdd4f9406665248335fd
+  - enabled: 1
+    path: Assets/scene/CyclusManager.unity
+    guid: aca05252b45c64b4598438b2a0bf6ecf

@@ -1,24 +1,20 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using Assets.classes;
 using Assets.Classes;
+using Assets.scripts.classes;
+using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
-using Assets.classes;
-using Newtonsoft.Json;
 
 public class ButtonBehaviour1 : MonoBehaviour
 {
 
     public Scrollbar Clickmeter;
     public float ClickTime = 1f;
-    public Text text;
-    
+
+
     private float Click = 0f;
-    
     private float lastClickTime = 0f;
     private float value = 0f;
 
@@ -33,13 +29,18 @@ public class ButtonBehaviour1 : MonoBehaviour
         {
             AppOpenDate appOpenDate = new AppOpenDate();
             appOpenDate.writeToJSON();
-            //TODO Naar nieuwe scene gaan
 
-            string[] scenes = new string[2] { "Video", "FruitDefence" };
-            int random = Random.Range(0, 2);
-
-
-                SceneManager.LoadScene(scenes[random]);
+            LaatsteDatum laatstedatum = new LaatsteDatum();
+            DateTime lastDate = laatstedatum.GetLastDate();
+            //check if it's time to ask the question if user smoked or not.
+            Debug.Log((DateTime.Now - lastDate).TotalDays);
+            if ((DateTime.Now - lastDate).Days >= 0)
+            {
+                SceneManager.LoadScene("CyclusManager");
+            }
+            else {
+                RandomScene.loadRandomScene();
+            }
 
         }
     }

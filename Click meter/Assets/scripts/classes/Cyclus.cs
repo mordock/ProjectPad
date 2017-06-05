@@ -1,12 +1,10 @@
 ﻿using Assets.Classes;
+using Assets.SimpleAndroidNotifications;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using UnityEngine;
-using Assets.SimpleAndroidNotifications;
 
 namespace Assets.classes
 {
@@ -32,7 +30,9 @@ namespace Assets.classes
 
         private string path = Application.persistentDataPath + "/Cyclus.json";
 
-        public Cyclus() {
+
+        public Cyclus()
+        {
             monday = new List<TimeSpan>();
             tuesday = new List<TimeSpan>();
             wednesday = new List<TimeSpan>();
@@ -45,16 +45,19 @@ namespace Assets.classes
         /// Read all dateTimes from the AppOpenDate.json file and sort them to days and store the just the times per day in json cyclus.json.
         /// </summary>
         /// <param name="appOpenDateList">The list of data taken from AppOpenDate.json</param>
-        public void createCyclus(List<AppOpenDate> appOpenDateList) {
+        public void createCyclus(List<AppOpenDate> appOpenDateList)
+        {
             if (!File.Exists(path))
             {
                 File.Create(path).Close();
-                foreach (AppOpenDate item in appOpenDateList) {
+                foreach (AppOpenDate item in appOpenDateList)
+                {
                     //Get day of week from datetime to check in what list the timespan belongs
                     DayOfWeek dayOfWeek = item.datetimeOpened.DayOfWeek;
                     TimeSpan time = item.datetimeOpened.TimeOfDay;
                     //Add time to the correct list
-                    switch (dayOfWeek) {
+                    switch (dayOfWeek)
+                    {
                         case DayOfWeek.Monday:
                             monday.Add(time);
                             break;
@@ -111,17 +114,19 @@ namespace Assets.classes
                 Cyclus cyclus = readCyclus();
                 sendNotification(0, cyclus);
             }
-            else {
-                //cyclus is already created create send notifications
+            else
+            {
+                //cyclus is already created create send notifications 
                 Cyclus cyclus = readCyclus();
                 sendNotification(0, cyclus);
-            }  
+            }
         }
 
         /// <summary>
         /// Set the notification in android for entire week
         /// </summary>
-        public void sendNotification(int daysAdded, Cyclus cyclus) {
+        public void sendNotification(int daysAdded, Cyclus cyclus)
+        {
             int minMinutes = 15;
             DayOfWeek today;
             if (daysAdded > 0)
@@ -135,7 +140,8 @@ namespace Assets.classes
             TimeSpan currentTime = DateTime.Now.TimeOfDay;
             List<TimeSpan> todayTimes;
 
-            switch (today) {
+            switch (today)
+            {
                 case DayOfWeek.Monday:
                     todayTimes = cyclus.monday;
                     break;
@@ -175,7 +181,7 @@ namespace Assets.classes
 
             if (daysAdded < 6)
             {
-                sendNotification(daysAdded+1, cyclus);
+                sendNotification(daysAdded + 1, cyclus);
             }
 
         }
@@ -184,9 +190,11 @@ namespace Assets.classes
         /// Read cyclus.json file
         /// </summary>
         /// <returns>Cyclus object filled with data from json file</returns>
-        public Cyclus readCyclus() {
+        public Cyclus readCyclus()
+        {
             Cyclus cyclus;
-            using (StreamReader r = new StreamReader(path)) {
+            using (StreamReader r = new StreamReader(path))
+            {
                 string json = r.ReadToEnd();
                 cyclus = JsonConvert.DeserializeObject<Cyclus>(json, Constants.jsonSerializerSettings);
                 r.Close();
@@ -271,7 +279,7 @@ namespace Assets.classes
                     }
                 }
             }
-            
+
             File.WriteAllText(path, JsonConvert.SerializeObject(cyclus, Constants.jsonSerializerSettings));
         }
     }
