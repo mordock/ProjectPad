@@ -7,6 +7,8 @@ using UnityEngine.UI;
 using Assets.Classes;
 using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
+using Assets.classes;
+using Newtonsoft.Json;
 
 public class ButtonBehaviour1 : MonoBehaviour
 {
@@ -15,9 +17,7 @@ public class ButtonBehaviour1 : MonoBehaviour
     public float ClickTime = 1f;
     public Text text;
     
-
     private float Click = 0f;
-
     
     private float lastClickTime = 0f;
     private float value = 0f;
@@ -37,7 +37,9 @@ public class ButtonBehaviour1 : MonoBehaviour
 
             string[] scenes = new string[2] { "Video", "FruitDefence" };
             int random = Random.Range(0, 2);
-            SceneManager.LoadScene(scenes[random]);
+
+
+                SceneManager.LoadScene(scenes[random]);
 
         }
     }

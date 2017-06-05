@@ -46,6 +46,10 @@ namespace Assets.Classes
                 }               
                 
                 DateTime endOfCyclusCalculationPeriod = appOpenDateList.First().datetimeOpened.AddDays(CALCULATION_DURATION_DAYS);
+
+                LaatsteDatum laatstedatum = new LaatsteDatum();
+                laatstedatum.WriteFirstDate(endOfCyclusCalculationPeriod);
+
                 DateTime lastOpened = appOpenDateList.Last().datetimeOpened.AddMinutes(MINUTES_BETWEEN_SMOKES);
 
                 //DateTime is before end of cyclus calculation period and atleast 1 hour after the last datetime added.
