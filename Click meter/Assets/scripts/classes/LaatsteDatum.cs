@@ -12,6 +12,7 @@ namespace Assets.classes
 
         private string path = Application.persistentDataPath + "/CyclusManager.json";
 
+        //get the last date of the first week of the cyclus
         public DateTime GetLastDate()
         {
             DateTime laatstedatum;
@@ -31,6 +32,7 @@ namespace Assets.classes
             return laatstedatum.ToLocalTime();
         }
 
+        //write the last date to CyclusManager.json
         public void WriteFirstDate(DateTime date)
         {
             if (!File.Exists(path))
@@ -42,6 +44,7 @@ namespace Assets.classes
             File.WriteAllText(path, JsonConvert.SerializeObject(lastDate, Constants.jsonSerializerSettings));
         }
 
+        //Show scene after 7 days (week)
         public void CreateFirstDate(DateTime date)
         {
             if (!File.Exists(path))

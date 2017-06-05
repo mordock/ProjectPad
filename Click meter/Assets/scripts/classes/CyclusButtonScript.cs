@@ -8,6 +8,7 @@ public class CyclusButtonScript : MonoBehaviour
 
     private const int DAYS_BETWEEN_QUESTION = 7;
 
+    //if statement to show the questionscene once a week
     public void Knop(bool antwoord)
     {
         if (antwoord)

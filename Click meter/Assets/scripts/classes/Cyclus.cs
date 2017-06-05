@@ -213,6 +213,7 @@ namespace Assets.classes
 
                 int sigarettesPerDay;
 
+                //count the amount of notifications for every day of hte week
                 switch (i)
                 {
                     case 0:
@@ -238,6 +239,9 @@ namespace Assets.classes
                         break;
                 }
 
+                /*calculation to delete a small amount of notifications for each amount of notifications 
+                 * if the person clicked "Yes" at the question scene
+                 */
                 if (sigarettesPerDay <= 10)
                 {
                     CountNotifications = Convert.ToInt32(Math.Round(sigarettesPerDay * 0.10));
@@ -251,6 +255,7 @@ namespace Assets.classes
                     CountNotifications = Convert.ToInt32(Math.Round(sigarettesPerDay * 0.30));
                 }
 
+                //remove the notifications for every day of the week
                 for (int j = 0; j < CountNotifications; j++)
                 {
                     switch (i)
@@ -280,6 +285,7 @@ namespace Assets.classes
                 }
             }
 
+            //write to cyclus.json
             File.WriteAllText(path, JsonConvert.SerializeObject(cyclus, Constants.jsonSerializerSettings));
         }
     }
