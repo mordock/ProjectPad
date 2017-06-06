@@ -25,7 +25,7 @@ namespace Assets.SimpleAndroidNotifications
 
         public String RandomZinnen()
         {
-            String[] Zinnen = new String[] { "Het leven is als een neus, je moet eruit halen wat er in zit.",
+            String[] Zinnen = new String[] { "Life is like a nose, you have to get what's in it.",
                                             "Alles wat je aandacht geeft groeit.",
                                             "Ben je al goed op weg? Focus je aandacht even op deze app.",
                                             "Je bent er misschien nog niet, maar je bent wel dichter bij als gisteren.",
