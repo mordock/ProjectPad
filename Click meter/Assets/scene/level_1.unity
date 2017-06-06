@@ -117,7 +117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 45949328}
   - component: {fileID: 45949329}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Basket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,7 +185,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 245006438}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: fruit2/banana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 317421534}
   - component: {fileID: 317421536}
   - component: {fileID: 317421535}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: base
   m_TagString: base
   m_Icon: {fileID: 0}
@@ -355,7 +355,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 382187999}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: fruit3/lemon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 389421428}
   - component: {fileID: 389421429}
   - component: {fileID: 389421430}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: enemy
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -624,7 +624,7 @@ GameObject:
   m_Component:
   - component: {fileID: 467889848}
   - component: {fileID: 467889849}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: lemon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -692,7 +692,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 622149396}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: fruit4/orange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -819,7 +819,7 @@ GameObject:
   m_Component:
   - component: {fileID: 984225609}
   - component: {fileID: 984225610}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Apple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -888,7 +888,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1114821570}
   - component: {fileID: 1114821571}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Orange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -996,7 +996,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1152874125}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: fruit1/apple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1088,7 +1088,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1213609135}
   - component: {fileID: 1213609136}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: fruitholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1153,10 +1153,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1224481161}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4520401a70713e4dbbb60ca7eb8d20d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ac4f496873b5a3429ee42ad308f3450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SprayBar: {fileID: 1012094546838166, guid: 1ba7bf381956c1e428c6578e356608fd, type: 2}
+  SprayBar: {fileID: 1012094546838166, guid: 17653409aebdb0d4882e3463b4fd34fa, type: 2}
+  numberOfBombs: 3
 --- !u!4 &1224481163
 Transform:
   m_ObjectHideFlags: 0
@@ -1351,7 +1352,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1366357425}
   - component: {fileID: 1366357426}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: banana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1464,6 +1465,10 @@ Prefab:
       propertyPath: lifePoints
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1640338239037978, guid: b5f2036d6e9001a429409b8cb4a3cce1, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: b5f2036d6e9001a429409b8cb4a3cce1, type: 2}
@@ -1523,7 +1528,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ed5dbc9d70878924f9d392b3a52e3bc0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 56b0652530e079944bdb3d788942e4b0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1760,6 +1765,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1703478580286486, guid: 9f30b45725a127d4cbb7527b6049212e, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114520489544212848, guid: 9f30b45725a127d4cbb7527b6049212e, type: 2}
     - {fileID: 0}
@@ -1773,7 +1782,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2087112763}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: fruit5/basket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
