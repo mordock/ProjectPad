@@ -1,12 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Rotation : MonoBehaviour {
+public class Rotation : MonoBehaviour
+{
 
     public Transform target;
 
-    void Start () {
+    void Start()
+    {
         target = GameObject.FindGameObjectWithTag("base").transform;
         Vector3 dir = target.position - transform.position;
 

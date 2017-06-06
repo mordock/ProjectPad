@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.Video;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
-public class Video : MonoBehaviour {
+public class Video : MonoBehaviour
+{
 
     VideoPlayer videoPlayer;
     string vidID;
@@ -19,12 +17,13 @@ public class Video : MonoBehaviour {
     public GameObject UnmuteButton;
     public GameObject ExitButton;
 
-    void Start () {
+    void Start()
+    {
         GameObject camera = GameObject.Find("Main Camera");
         videoPlayer = camera.AddComponent<UnityEngine.Video.VideoPlayer>();
 
         //Select random video
-        int random = Random.Range(1, 4);     
+        int random = Random.Range(1, 4);
         switch (random)
         {
             case 1:
@@ -48,9 +47,11 @@ public class Video : MonoBehaviour {
         Debug.Log("Video: " + randVid + " loaded.");
     }
 
-    void Update() {
+    void Update()
+    {
         //Pause video when user taps on screen
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0))
+        {
             PauseCheck();
         }
 
@@ -59,7 +60,7 @@ public class Video : MonoBehaviour {
         {
             Debug.Log("Video: " + vidID + " ended.");
             Exit();
-        }   
+        }
     }
 
     //Method to check if the user correctly pressed the screen to pause the video
@@ -98,10 +99,10 @@ public class Video : MonoBehaviour {
         //If-statements to check if the user is not pressing on any button
         if (Input.mousePosition.x > MutePositionX + MuteRadius) { NotMuteX = true; }
         if (Input.mousePosition.y > MutePositionY + MuteRadius) { NotMuteY = true; }
-       
+
         if (Input.mousePosition.x < ExitPositionX - ExitRadius) { NotExitX = true; }
         if (Input.mousePosition.y < ExitPositionY - ExitRadius) { NotExitY = true; }
-        
+
 
         //If the user is pressing in the middle of the screen
         if (NotMuteY && NotExitY) { PauseVideo(); }
@@ -112,8 +113,9 @@ public class Video : MonoBehaviour {
     }
 
     //Method to pause the video and toggle the pause icon on/off
-    void PauseVideo() {
-    if (videoPlayer.isPlaying)
+    void PauseVideo()
+    {
+        if (videoPlayer.isPlaying)
         {
             videoPlayer.Pause();
             Pause.GetComponent<Renderer>().enabled = true;
@@ -124,7 +126,7 @@ public class Video : MonoBehaviour {
             Pause.GetComponent<Renderer>().enabled = false;
         }
     }
-    
+
     //Method to leave the Video scene
     public void Exit()
     {

@@ -1,17 +1,21 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class BaseBehaviour : MonoBehaviour {
-	public static int baseLives = 5;
+public class BaseBehaviour : MonoBehaviour
+{
+    public static int baseLives = 5;
 
-	void Update () {
-		if(baseLives <= 0){
-			SceneManager.LoadScene("GameOver");
+    void Update()
+    {
+        if (baseLives <= 0)
+        {
+            SceneManager.LoadScene("GameOver");
             baseLives = 5;
-		}
-	}
+        }
+    }
 
-	void OnGUI(){
-		GUI.Label(new Rect(3,3,20,20), baseLives.ToString());
-	}
+    void OnGUI()
+    {
+        GUI.Label(new Rect(3, 3, 20, 20), baseLives.ToString());
+    }
 }

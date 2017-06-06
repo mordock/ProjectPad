@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class GreenButton : MonoBehaviour
 {
     public Button clickButton;
-    
+
     private void Start()
     {
         //Wanneer je niet op de groene knop drukt, lukt het niet om op de rode knop te drukken.
@@ -21,7 +19,7 @@ public class GreenButton : MonoBehaviour
 
             if (touch.phase == TouchPhase.Began)
             {
-                if(touch.position.x < Screen.width / 3f && touch.position.y < Screen.height / 3f)
+                if (touch.position.x < Screen.width / 3f && touch.position.y < Screen.height / 3f)
                 //if (GetComponent<BoxCollider2D>().OverlapPoint(wp))
                 //Wanneer de groene button is ingedrukt, wordt de rode knop actief en kan je erop klikken.
                 {
@@ -29,7 +27,7 @@ public class GreenButton : MonoBehaviour
                 }
             }
             //Wanneer je de groene knop loslaat dan wordt automatisch de rode knop weer inactief en kan je niet op de rode knop drukken.
-            else if(touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
+            else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
             {
                 if (touch.position.x < Screen.width / 3f && touch.position.y < Screen.height / 3f)
                 //if (GetComponent<BoxCollider2D>().OverlapPoint(wp))

@@ -1,13 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class highscoreDisplay : MonoBehaviour {
-
-	//shows your score
-	void Start () {
-		Text myText = GetComponent<Text>();
-		myText.text = ScoreKeeper.score.ToString();
-	}
+public class highscoreDisplay : MonoBehaviour
+{
+    //shows your score
+    void Start()
+    {
+        Text myText = GetComponent<Text>();
+        myText.text = ScoreKeeper.score.ToString();
+    }
 }

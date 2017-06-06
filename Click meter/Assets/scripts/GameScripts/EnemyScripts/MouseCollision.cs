@@ -1,25 +1,26 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System;
+﻿using UnityEngine;
 
-public class MouseCollision : MonoBehaviour {
-	public int scoreValue = 10;
+public class MouseCollision : MonoBehaviour
+{
+    public int scoreValue = 10;
     public int lifeRemoved = -1;
-	private ScoreKeeper scoreKeeper;
+    private ScoreKeeper scoreKeeper;
     private EnemyLife enemyLife;
-	void Start(){
-		scoreKeeper = GameObject.Find("Score").GetComponent<ScoreKeeper>();
+    void Start()
+    {
+        scoreKeeper = GameObject.Find("Score").GetComponent<ScoreKeeper>();
         enemyLife = GetComponent<EnemyLife>();
-	}
+    }
 
-	private void Update () {
+    private void Update()
+    {
         if (Input.GetMouseButtonDown(0))
         {
             {
                 RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
 
-                if (hit.collider != null) {
+                if (hit.collider != null)
+                {
                     if (hit.collider.gameObject == gameObject)
                     {
                         enemyLife.lifePoints--;
