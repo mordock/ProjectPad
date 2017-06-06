@@ -11,7 +11,6 @@ public class Video : MonoBehaviour
     string video1 = "Assets/Videos/testVideo.mp4";
     string video2 = "Assets/Videos/testVideo2.mp4";
     string video3 = "Assets/Videos/testVideo3.mp4";
-    public GameObject Canvas;
     public GameObject Pause;
     public GameObject MuteButton;
     public GameObject UnmuteButton;
@@ -89,7 +88,7 @@ public class Video : MonoBehaviour
             MutePositionX = UnmuteButton.GetComponent<RectTransform>().position.x;
             MutePositionY = UnmuteButton.GetComponent<RectTransform>().position.y;
             MuteRadius = UnmuteButton.GetComponent<RectTransform>().localScale.y * MuteButton.GetComponent<RectTransform>().sizeDelta.y / 2;
-        }   
+        }
 
         //ExitButton's position and radius as displayed on screen
         float ExitPositionX = ExitButton.GetComponent<RectTransform>().position.x;
