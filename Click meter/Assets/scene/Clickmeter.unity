@@ -522,6 +522,7 @@ GameObject:
   - component: {fileID: 514876700}
   - component: {fileID: 514876699}
   - component: {fileID: 514876698}
+  - component: {fileID: 514876701}
   m_Layer: 5
   m_Name: Help Knop
   m_TagString: Untagged
@@ -587,7 +588,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1201131396}
+      - m_Target: {fileID: 514876701}
         m_MethodName: HelpKnop
         m_Mode: 1
         m_Arguments:
@@ -633,6 +634,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 514876696}
+--- !u!114 &514876701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 514876696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad99c4b3d12d84a4cbaf331f004cb8e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &732548912
 GameObject:
   m_ObjectHideFlags: 0
@@ -1041,6 +1053,7 @@ GameObject:
   - component: {fileID: 947857092}
   - component: {fileID: 947857091}
   - component: {fileID: 947857090}
+  - component: {fileID: 947857093}
   m_Layer: 5
   m_Name: ClickButton
   m_TagString: Untagged
@@ -1105,7 +1118,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1201131395}
+      - m_Target: {fileID: 947857093}
         m_MethodName: Knop
         m_Mode: 4
         m_Arguments:
@@ -1151,6 +1164,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 947857088}
+--- !u!114 &947857093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 947857088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9e31e57853789841ab1e4101baa6642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Clickmeter: {fileID: 402407603}
+  ClickTime: 0.15
 --- !u!1 &1026716359
 GameObject:
   m_ObjectHideFlags: 0
@@ -1231,8 +1257,6 @@ GameObject:
   - component: {fileID: 1201131392}
   - component: {fileID: 1201131391}
   - component: {fileID: 1201131390}
-  - component: {fileID: 1201131395}
-  - component: {fileID: 1201131396}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1310,31 +1334,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1201131395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1201131389}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9e31e57853789841ab1e4101baa6642, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Clickmeter: {fileID: 402407603}
-  ClickTime: 0.15
-  text: {fileID: 0}
---- !u!114 &1201131396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1201131389}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad99c4b3d12d84a4cbaf331f004cb8e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1273401998
 GameObject:
   m_ObjectHideFlags: 0
