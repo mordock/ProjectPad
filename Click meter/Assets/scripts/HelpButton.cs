@@ -11,8 +11,4 @@ public class HelpButton : MonoBehaviour
 		SceneManager.LoadScene ("help");
 	}
 
-    public void CalendarKnop()
-    {
-        SceneManager.LoadScene("Calendar");
-    }
 }

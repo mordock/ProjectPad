@@ -8,6 +8,7 @@ TagManager:
   - enemy
   - SoldierAnt
   - BulletAnt
+  - greenButton
   layers:
   - Default
   - TransparentFX
