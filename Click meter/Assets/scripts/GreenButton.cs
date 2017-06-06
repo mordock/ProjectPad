@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class GreenButton : MonoBehaviour
 {
     public Button clickButton;
-    
+
     private void Start()
     {
-        //Wanneer je niet op de groene knop drukt, lukt het niet om op de rode knop te drukken.
+        //If you do not press the green button, you can not press the red button.
         clickButton.interactable = false;
     }
 
@@ -21,15 +21,15 @@ public class GreenButton : MonoBehaviour
 
             if (touch.phase == TouchPhase.Began)
             {
-                if(touch.position.x < Screen.width / 3f && touch.position.y < Screen.height / 3f)
+                if (touch.position.x < Screen.width / 3f && touch.position.y < Screen.height / 3f)
                 //if (GetComponent<BoxCollider2D>().OverlapPoint(wp))
-                //Wanneer de groene button is ingedrukt, wordt de rode knop actief en kan je erop klikken.
+                //When the green button is pressed, the red button becomes active and can be clicked 
                 {
                     clickButton.interactable = true;
                 }
             }
-            //Wanneer je de groene knop loslaat dan wordt automatisch de rode knop weer inactief en kan je niet op de rode knop drukken.
-            else if(touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
+            //When you release the green button, the red button automatically turns off again and you can not press the red button.
+            else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
             {
                 if (touch.position.x < Screen.width / 3f && touch.position.y < Screen.height / 3f)
                 //if (GetComponent<BoxCollider2D>().OverlapPoint(wp))
@@ -38,12 +38,12 @@ public class GreenButton : MonoBehaviour
                 }
             }
         }
-        //Deze regels code hieronder geven mijn voortgang aan, omdat we vier manieren hebben geprobeerd om deze code te laten werken.
-        //Deze regels code hieronder is van de laatste mislukte poging.
+        //These rules code below indicate my progress because we have tried four ways to make this code work.
+        // This rules code below is the last failed attempt.
 
         /*if (Input.touchCount >= 1)
         {
-        //Hier is er een collider aangemaakt die ervoor zou moeten zorgen dat de rode knop actief wordt, wanneer je op de groene knop drukt.
+        //This collider has been created that should cause the red button to become active when you press the green button.
             Vector3 wp = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
             if (GetComponent<BoxCollider2D>().OverlapPoint(wp))
             {
