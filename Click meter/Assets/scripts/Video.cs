@@ -70,10 +70,25 @@ public class Video : MonoBehaviour {
         bool NotExitX = false;
         bool NotExitY = false;
 
-        //MuteButton's position and radius as displayed on screen
-        float MutePositionX = MuteButton.GetComponent<RectTransform>().position.x;
-        float MutePositionY = MuteButton.GetComponent<RectTransform>().position.y;
-        float MuteRadius = MuteButton.GetComponent<RectTransform>().localScale.y * MuteButton.GetComponent<RectTransform>().sizeDelta.y / 2;
+        //MuteButton or UnmuteButton's position and radius as displayed on screen
+        float MutePositionX;
+        float MutePositionY;
+        float MuteRadius;
+
+        //When the video is not muted, use MuteButton's position
+        if (AudioListener.volume == 1)
+        {
+            MutePositionX = MuteButton.GetComponent<RectTransform>().position.x;
+            MutePositionY = MuteButton.GetComponent<RectTransform>().position.y;
+            MuteRadius = MuteButton.GetComponent<RectTransform>().localScale.y * MuteButton.GetComponent<RectTransform>().sizeDelta.y / 2;
+        }
+        //When the video is muted, use UnmuteButton's position
+        else
+        {
+            MutePositionX = UnmuteButton.GetComponent<RectTransform>().position.x;
+            MutePositionY = UnmuteButton.GetComponent<RectTransform>().position.y;
+            MuteRadius = UnmuteButton.GetComponent<RectTransform>().localScale.y * MuteButton.GetComponent<RectTransform>().sizeDelta.y / 2;
+        }   
 
         //ExitButton's position and radius as displayed on screen
         float ExitPositionX = ExitButton.GetComponent<RectTransform>().position.x;
