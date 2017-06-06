@@ -11,11 +11,11 @@ public class BaseBehaviour : MonoBehaviour
         {
             SceneManager.LoadScene("GameOver");
             baseLives = 5;
-        }
-    }
+        }   
+   }
 
     void OnGUI()
     {
-        GUI.Label(new Rect(3, 3, 20, 20), baseLives.ToString());
+        GUI.Label(new Rect(-10, -10, 20, 20), baseLives.ToString());
     }
 }
