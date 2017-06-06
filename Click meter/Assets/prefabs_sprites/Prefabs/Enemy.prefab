@@ -120,6 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreValue: 10
   lifeRemoved: -1
+  squash: {fileID: 8300000, guid: 434efd6a48196ea48b0b6c48d1f285ef, type: 3}
 --- !u!212 &212798208874985546
 SpriteRenderer:
   m_ObjectHideFlags: 1

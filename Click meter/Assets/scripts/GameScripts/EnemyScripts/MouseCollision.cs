@@ -6,6 +6,7 @@ public class MouseCollision : MonoBehaviour
     public int lifeRemoved = -1;
     private ScoreKeeper scoreKeeper;
     private EnemyLife enemyLife;
+    public AudioClip squash;
     void Start()
     {
         scoreKeeper = GameObject.Find("Score").GetComponent<ScoreKeeper>();
@@ -30,6 +31,7 @@ public class MouseCollision : MonoBehaviour
                             //destruction of enemies and score adding is handled here because different enemeis have different amounts of health,
                             //handling unit destruction and point adding seperately leads to unnecessary complications.
                             scoreKeeper.Score(scoreValue);
+							AudioSource.PlayClipAtPoint(squash, transform.position);
                             Destroy(gameObject);
                         }
                     }
