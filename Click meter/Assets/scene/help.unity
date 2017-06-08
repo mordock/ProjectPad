@@ -435,9 +435,10 @@ MonoBehaviour:
     is calculated by remembering when you open up the app in the first two weeks.\r\nAfter
     the first two weeks the app will send you notifications at times you normally
     would smoke, this is to make sure you will be distracted from smoking at these
-    times.\r\nGood luck!\r\n\r\nThe red button:\r\nThe goal is to click the red button
-    until the bar has been filled. You'll be redirected to the next screen when the
-    bar has been filled.\r\n"
+    times.\r\nGood luck!\r\n\nThe green button:\nThe green button must be pressed
+    for the red button to be activated.\n\r\nThe red button:\r\nBy clicking the red
+    button the bar gets filled. Once the bar is full\nyou'll be redirected to the
+    next screen when the bar has been filled.\r\n"
 --- !u!222 &658131980
 CanvasRenderer:
   m_ObjectHideFlags: 0
