@@ -13,14 +13,14 @@ namespace Assets.Classes
     /// </summary>
     class AppOpenDate
     {
-        private const int CALCULATION_DURATION_DAYS = 7;
+        private const int CALCULATION_DURATION_DAYS = 14;
         private const int MINUTES_BETWEEN_SMOKES = 15;
         [JsonProperty]
         public DateTime datetimeOpened { get; private set; }
 
         public AppOpenDate()
         {
-            datetimeOpened = DateTime.Now.AddMinutes(1);
+            datetimeOpened = DateTime.Now;
         }
 
         /// <summary>
